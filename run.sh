@@ -2,18 +2,6 @@
 
 set -x
 
-while true ; do
-  if [ -f /data/params ]; then
-    echo "### Parameters"
-    cat /data/params
-    source /data/params
-    break
-  else
-    echo $(date) - Waiting for Parameters
-    sleep 5
-  fi
-done
-
 mkdir /app
 cd /app
 git clone https://github.com/raghudevopsb73/catalogue
